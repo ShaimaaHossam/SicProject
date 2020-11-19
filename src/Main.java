@@ -31,10 +31,10 @@ public class Main {
         }
         for(int i=0; i<prog.size(); i++ ){
             String s = prog.get(i);
-            //System.out.println(s);
+
             String[] line = s.split(" ");
             if(line[1].equals("Start") ){
-                start = Integer.parseInt(line[2],16);
+                start = Integer.parseInt(line[2]);
                 String addressHex = String.format("%04X", start);
                 s = addressHex + " " +s;
                 startAddress = addressHex;
@@ -42,14 +42,14 @@ public class Main {
                 //System.out.println(s);
 
             }
-            else if(line[1].equals("RESW")){
+            else if(line[1].equals("RESW") && Integer.parseInt(line[2]) >1){
 
-                int n = Integer.parseInt(line[2])*3;
-                start+=n;
+                int n = Integer.parseInt(line[2]);
+                start=start+3;
                 String addressHex = String.format("%04X", start);
                 s = addressHex + " " +s;
                 prog.set(i,s);
-
+                start = start + n*3;
             }
 
             else if(i==1){
