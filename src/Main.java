@@ -45,23 +45,24 @@ public class Main {
             else if(line[1].equals("RESW") && Integer.parseInt(line[2]) >1){
 
                 int n = Integer.parseInt(line[2]);
-                start=start+3;
                 String addressHex = String.format("%04X", start);
                 s = addressHex + " " +s;
                 prog.set(i,s);
                 start = start + n*3;
+
             }
 
             else if(i==1){
                 //System.out.println(startAddress + " " +s);
                 prog.set(i,startAddress+" "+s);
+                start+=3;
             }
             else{
-                start+=3;
+
                 String addressHex = String.format("%04X", start);
                 s = addressHex + " " +s;
                 prog.set(i,s);
-
+                start+=3;
             }
         }
         for(int i =0; i<prog.size(); i++){
