@@ -15,6 +15,7 @@ public class Main {
         p1.Symbol_table();
 
         pass2 p2 = new pass2(original_file);
+
     }
 
 
