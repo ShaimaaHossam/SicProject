@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class pass1 {
 
     ArrayList<String> prog;
+    ArrayList<String> symbols = new ArrayList<>();
     int start=0;
     String startAddress = "";
 
@@ -14,6 +15,7 @@ public class pass1 {
         prog = new ArrayList<>() ;
         //Read file
         try{
+
             File myObj=new File("in.txt");
             Scanner myReader=new Scanner(myObj);
             while(myReader.hasNextLine()){
@@ -22,6 +24,7 @@ public class pass1 {
                 prog.add(data);
             }
             myReader.close();
+
         }
         catch(FileNotFoundException e){
             System.out.println("An error occurred.");
@@ -73,7 +76,20 @@ public class pass1 {
         return prog;
     }
 
-    public void Symbol_table(){
+    public ArrayList<String> Symbol_table(){
+        System.out.println("\n\nSYMBOL TABLE:");
+        for(int i=1; i<prog.size(); i++){
+            String instruction = prog.get(i);
+            String[] line = instruction.split(" ");
+            if(line.length > 3 ){
+                //symbols.add(line[1]);
+                symbols.add(line[0] + " "+line[1]);
+            }
+        }
 
+        for(int i =0; i<symbols.size(); i++){
+            System.out.println(symbols.get(i));
+        }
+        return symbols;
     }
 }
