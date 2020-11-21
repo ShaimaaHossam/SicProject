@@ -11,12 +11,10 @@ public class Ascii {
             ,{"RSUB" , "4C"} ,{"STA" , "0C"} ,{"STCH" , "54"}
             ,{"STL" , "14"} ,{"STSW" , "E8"} ,{"STX" , "10"}
             ,{"SUB" , "1C"} ,{"TD" , "E0"} ,{"TIX" , "2C"}
-            ,{"WD" , "DC"},{"RESW" , "No object"},{"WORD" , "00"},
+            ,{"WD" , "DC"},{"RESW" , ""},{"WORD" , "00"},
             {"End" , "END"}
     };
-    public Ascii(){
-
-    }
+    public Ascii(){ }
     public String getAscii(String mnem)
     {
         for(int i = 0 ; i < Mnemonic_Opcode.length ; i++)

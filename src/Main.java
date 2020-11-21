@@ -15,7 +15,7 @@ public class Main {
         ArrayList<String> Symbol_table = p1.Symbol_table();
 
         pass2 p2 = new pass2(code_plus_address,Symbol_table);
-
+        p2.Objcode();
     }
 
 
