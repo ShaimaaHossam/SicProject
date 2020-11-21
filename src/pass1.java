@@ -20,7 +20,7 @@ public class pass1 {
             Scanner myReader=new Scanner(myObj);
             while(myReader.hasNextLine()){
                 String data=myReader.nextLine();
-                System.out.println(data);
+//                System.out.println(data);
                 prog.add(data);
             }
             myReader.close();
@@ -35,7 +35,7 @@ public class pass1 {
     }
 
     public ArrayList<String> Generate_LOCCR(){
-        System.out.println("\n\n\nGENERATE LOCATION COUNTER: \n");
+//        System.out.println("\n\n\nGENERATE LOCATION COUNTER: \n");
         for(int i=0; i<prog.size(); i++ ){
             String s = prog.get(i);
 
@@ -70,14 +70,14 @@ public class pass1 {
             }
         }
         for(int i =0; i<prog.size(); i++){
-            System.out.println(prog.get(i));
+//            System.out.println(prog.get(i));
         }
 
         return prog;
     }
 
     public ArrayList<String> Symbol_table(){
-        System.out.println("\n\nSYMBOL TABLE:");
+//        System.out.println("\n\nSYMBOL TABLE:");
         for(int i=1; i<prog.size(); i++){
             String instruction = prog.get(i);
             String[] line = instruction.split(" ");
@@ -88,7 +88,7 @@ public class pass1 {
         }
 
         for(int i =0; i<symbols.size(); i++){
-            System.out.println(symbols.get(i));
+//            System.out.println(symbols.get(i));
         }
         return symbols;
     }
