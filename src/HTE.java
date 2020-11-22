@@ -27,7 +27,7 @@ public class HTE {
         int k = i +11;
         int v = 1;
         while (v != 0){
-            if (k <= final_prog_table.size() && ){
+            if (k <= final_prog_table.size() ){
                 for ( i =i ; i<k;i++){
                     String  s1 = final_prog_table.get(i);
                     String[] line = s1.split(" ");
