@@ -18,7 +18,7 @@ public class pass1 {
         //Read file
         try{
 
-            File myObj=new File("in2.txt");
+            File myObj=new File("in.txt");
             Scanner myReader=new Scanner(myObj);
             while(myReader.hasNextLine()){
                 String data=myReader.nextLine();
