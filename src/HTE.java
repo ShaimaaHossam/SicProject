@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class HTE {
     ArrayList<String> Temp = new ArrayList<>();
@@ -45,6 +48,15 @@ public class HTE {
                 }
 
                 System.out.println("\nT."+Tlength+Trecord);
+                File file = new File("hte record.txt");
+                try
+                {
+                    FileWriter write = new FileWriter(file);
+
+                        write.write("T."+Tlength+Trecord);
+
+                    write.close();
+                }catch(Exception ex){}
                 v=0;
             }
             else if(k > final_prog_table.size()){
